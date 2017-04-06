@@ -13,7 +13,8 @@ public class ByteUtilities {
 	}
 	
 	public static byte[] toByteArray(BigDecimal value, int length) {
-		return ByteBuffer.allocate(length).putInt(MathUtilities.fromBigDecimalToInt(value)).array();
+		return ByteBuffer.allocate(length)
+				.putInt(com.systemonenoc.avatar.card.service.MathUtilities.fromBigDecimalToInt(value)).array();
 	}
 	
 	public static byte[] toByteArray(int value, int length) {
@@ -40,7 +41,8 @@ public class ByteUtilities {
 		intPart = concat(intPart, intValue);
 		
 		BigDecimal remainder = value.remainder(BigDecimal.ONE).multiply(BigDecimal.valueOf(100));
-		byte[] decValue = toByteArray(MathUtilities.fromBigDecimalToInt(remainder));
+		byte[] decValue = toByteArray(
+				com.systemonenoc.avatar.card.service.MathUtilities.fromBigDecimalToInt(remainder));
 		byte[] decPart = { (byte) decValue.length };
 		decPart = concat(decPart, decValue);
 		
