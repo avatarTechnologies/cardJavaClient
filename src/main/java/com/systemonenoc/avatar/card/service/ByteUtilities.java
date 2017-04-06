@@ -3,8 +3,6 @@ package com.systemonenoc.avatar.card.service;
 import java.math.BigDecimal;
 import java.nio.ByteBuffer;
 
-import com.systemonenoc.avatar.core.smartcard.MathUtilities;
-
 public class ByteUtilities {
 	
 	public static byte[] concat(byte[] a, byte[] b) {
