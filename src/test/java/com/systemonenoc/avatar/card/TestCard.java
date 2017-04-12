@@ -24,11 +24,6 @@ public class TestCard {
 	CardService cardService;
 	
 	@Test
-	public void wer() {
-		logger.debug("{}", (byte) 0x9C);
-	}
-	
-	@Test
 	public void getCardChannel() throws CardException {
 		CardChannel channel = CardService.getCardChannel();
 		Assert.notNull(channel);
